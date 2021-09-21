@@ -1,0 +1,44 @@
+# header information:
+HGDI|9.00
+
+# Views:
+Vlayout|lay
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D300.0
+
+# Cell GDI;1{lay}
+CGDI;1{lay}||mocmos|1632218154296|1632221904914||DRC_last_good_drc_area_date()G1632220691403|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1632220691403
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-P-Active-Con|contact@0||-14|34||15||
+NMetal-1-P-Active-Con|contact@1||-2|34||15||
+NMetal-1-N-Active-Con|contact@2||-2|4||5||
+NMetal-1-N-Active-Con|contact@3||-14|4||5||
+NN-Transistor|nmos@1||-8|4|7||R||SIM_spice_model(D5G1;X-8;)SNMOS
+NPolysilicon-1-Pin|pin@0||-8|16||||
+NPolysilicon-1-Pin|pin@1||-40|16||||
+NMetal-1-Pin|pin@2||-2|16||||
+NMetal-1-Pin|pin@3||28|16||||
+Ngeneric:Invisible-Pin|pin@4||31|-30|||||SIM_spice_card(A40;D5)S[vin G 0 pulse 0 5 0 1n 1n 8m 16m,vin2 P 0 pulse 0 5 0 1n 1n 4m 8m,.tran 16m,.include C5_models.txt]
+NP-Transistor|pmos@1||-8|34|17||R||SIM_spice_model(D5G1;X-12;)SPMOS
+NMetal-1-P-Well-Con|substr@1||-8|-10|25|||
+NMetal-1-N-Well-Con|well@2||-8|52|15|||
+AMetal-1|net@3||1|S900|contact@1||-2|34|contact@2||-2|2
+AP-Active|net@11|||S0|pmos@1|diff-top|-11.75|34|contact@0||-14|34
+AP-Active|net@12|||S1800|pmos@1|diff-bottom|-4.25|34|contact@1||-2|34
+AN-Active|net@13|||S1800|contact@3||-14|4|nmos@1|diff-top|-11.75|4
+AN-Active|net@14|||S0|contact@2||-2|4|nmos@1|diff-bottom|-4.25|4
+AMetal-1|net@17||1|S900|contact@1||-2|34|contact@2||-2|2
+AMetal-1|net@24||1|S900|contact@3||-14|4|substr@1||-14|-10
+AMetal-1|net@25||1|S900|well@2||-14|52|contact@0||-14|34
+APolysilicon-1|net@26|||S900|pmos@1|poly-left|-8|22|pin@0||-8|16
+APolysilicon-1|net@27|||S900|pin@0||-8|16|nmos@1|poly-right|-8|11
+APolysilicon-1|net@28|||S0|pin@0||-8|16|pin@1||-40|16
+AMetal-1|net@29||1|S900|contact@1||-2|34|pin@2||-2|16
+AMetal-1|net@30||1|S900|pin@2||-2|16|contact@2||-2|2
+AMetal-1|net@31||1|S1800|pin@2||-2|16|pin@3||28|16
+EOUT|D|D5G2;|pin@3||U
+EIN|G|D5G2;|pin@1||U
+EGND||D5G2;|substr@1||U
+EVdd|P|D5G2;|well@2||U
+X
