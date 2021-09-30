@@ -1,7 +1,7 @@
 *** SPICE deck for cell GDI{lay} from library GDI
 *** Created on Tue Sep 21, 2021 15:25:54
-*** Last revised on Sun Sep 26, 2021 00:40:04
-*** Written on Sun Sep 26, 2021 01:00:07 by Electric VLSI Design System,
+*** Last revised on Sat Sep 25, 2021 23:04:30
+*** Written on Sat Sep 25, 2021 23:04:38 by Electric VLSI Design System,
 *version 9.00
 *** Layout tech: mocmos, foundry MOSIS
 *** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
@@ -13,14 +13,16 @@
 +KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
 +LD=0.6E-6 TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10 CJ=.2MF/M^2
 .MODEL DIFFCAP D CJO=.2MF/M^2
-*** WARNING: no power connection for P-transistor wells in cell 'GDI{lay}'
-*** WARNING: no ground connection for N-transistor wells in cell 'GDI{lay}'
+*** WARNING: no power connection for P-transistor wells in cell
+*'GDI:GDI{lay}'
+*** WARNING: no ground connection for N-transistor wells in cell
+*'GDI:GDI{lay}'
 
-*** TOP LEVEL CELL: GDI{lay}
-Mnmos@1 D G N gnd NMOS L=0.6U W=3U AS=15.75P AD=10.125P PS=25.5U PD=13.5U
+*** TOP LEVEL CELL: GDI:GDI{lay}
+Mnmos@1 D G N gnd NMOS L=0.6U W=3U AS=20.25P AD=10.125P PS=31.5U PD=13.5U
 Mpmos@1 D G P vdd PMOS L=0.6U W=6U AS=22.5P AD=10.125P PS=31.5U PD=13.5U
 
-* Spice Code nodes in cell cell 'GDI{lay}'
+* Spice Code nodes in cell cell 'GDI:GDI{lay}'
 vin G 0 pulse 0 5 0 1n 1n 8m 16m
 vin2 P 0 pulse 0 5 0 1n 1n 4m 8m
 vin3 N 0 pulse 0 5 0 1n 1n 2m 4m

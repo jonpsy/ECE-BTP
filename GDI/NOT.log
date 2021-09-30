@@ -1,0 +1,32 @@
+Circuit: *** SPICE deck for cell NOT{lay} from library NOT
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+WARNING: Node NET@6 is floating.
+WARNING: Node VDD is floating.
+
+WARNING: Less than two connections to node NET@6.  This node is used by MNMOS@0.
+WARNING: Less than two connections to node NET@0.  This node is used by MPMOS@0.
+WARNING: Less than two connections to node VDD.  This node is used by MPMOS@0.
+.OP point found by inspection.
+
+Date: Sat Sep 25 23:21:56 2021
+Total elapsed time: 0.087 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3382
+traniter = 3382
+tranpoints = 1626
+accept = 1540
+rejected = 86
+matrix size = 6
+fillins = 0
+solver = Normal
+Matrix Compiler1: 334 bytes object code size  0.2/0.1/[0.0]
+Matrix Compiler2: 530 bytes object code size  0.2/0.1/[0.1]
+
+

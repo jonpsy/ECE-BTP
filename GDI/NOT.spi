@@ -1,0 +1,29 @@
+*** SPICE deck for cell NOT{lay} from library NOT
+*** Created on Tue Sep 21, 2021 16:10:05
+*** Last revised on Sat Sep 25, 2021 23:21:19
+*** Written on Sat Sep 25, 2021 23:21:24 by Electric VLSI Design System,
+*version 9.00
+*** Layout tech: mocmos, foundry MOSIS
+*** UC SPICE *** , MIN_RESIST 4.0, MIN_CAPAC 0.1FF
+*CMOS/BULK-NWELL (PRELIMINARY PARAMETERS)
+.MODEL N NMOS LEVEL=1
++KP=60E-6 VTO=0.7 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
++LD=0.4E-6 TOX=40E-9 CGSO=2.0E-10 CGDO=2.0E-10 CJ=.2MF/M^2
+.MODEL P PMOS LEVEL=1
++KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
++LD=0.6E-6 TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10 CJ=.2MF/M^2
+.MODEL DIFFCAP D CJO=.2MF/M^2
+*** WARNING: no power connection for P-transistor wells in cell
+*'NOT:NOT{lay}'
+*** WARNING: no ground connection for N-transistor wells in cell
+*'NOT:NOT{lay}'
+
+*** TOP LEVEL CELL: NOT:NOT{lay}
+Mnmos@0 D G net@6 gnd NMOS L=0.6U W=3U AS=20.25P AD=10.125P PS=31.5U PD=13.5U
+Mpmos@0 D G net@0 vdd PMOS L=0.6U W=6U AS=22.5P AD=10.125P PS=31.5U PD=13.5U
+
+* Spice Code nodes in cell cell 'NOT:NOT{lay}'
+vin G 0 pulse 0 5 0 1n 1n 8m 16m
+.tran 32m
+.include C5_models.txt
+.END
